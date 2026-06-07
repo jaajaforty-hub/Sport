@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>FortunateWins</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Tektur:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./style/game.css">
+
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<header class="top-bar">
+
+<div class="left-top">
+
+<div class="logo">
+FortunateWins
+</div>
+
+<div class="search-box">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+<path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+</svg>
+
+<input type="search" placeholder="Search team, country or league">
+
+</div>
+
+</div>
+
+<div class="top-buttons">
+
+<a class="menu-btn" href="/soccer" style="text-decoration: none;">
+HOME
+</a>
+
+<a href="/logout" class="signout">
+Sign Out
+</a>
+
+</div>
+
+</header>
+
+<!-- NAVIGATION -->
+
+<section class="contents">
+
+<a href="/soccer" >
+⚽ Soccer
+</a>
+
+<a href="/nfl">
+🏈 NFL
+</a>
+
+<a href="/basketball">
+🏀 Basketball
+</a>
+
+<a href="/volleyball">
+🏐 Volleyball
+</a>
+
+<a href="/hockey">
+🏒 Hockey
+</a>
+
+</section>
+
+<!-- MAIN -->
+
+<main class="main">
+
+<!-- CENTER -->
+
+<section class="card center">
+
+<div class="bet-banner">
+
+<h1>Bet Of The Day</h1>
+
+<p>
+Best 🏈 predictions, winning odds.
+</p>
+
+</div>
+
+<div class="match-table">
+
+<div class="match-header">
+<div>Logo</div>
+<div>Team</div>
+<div>Country</div>
+<div>Odds</div>
+<div>Time</div>
+</div>
+
+<div id="matches-container"></div>
+
+</div>
+
+</section>
+
+<!-- RIGHT -->
+
+<section class="right-panel">
+
+<div class="card">
+
+<h2 class="card-title">
+Tomorrow
+</h2>
+
+<div class="match-header">
+<div>Logo</div>
+<div>Team</div>
+<div>Country</div>
+<div>Odds</div>
+<div>Time</div>
+</div>
+
+<div id="tomorrow-container"></div>
+
+</div>
+
+<div class="card">
+
+<h2 class="card-title">
+Upcoming
+</h2>
+
+<div class="match-header">
+<div>Logo</div>
+<div>Team</div>
+<div>Country</div>
+<div>Odds</div>
+<div>Time</div>
+</div>
+
+<div id="upcoming-container"></div>
+
+</div>
+
+</section>
+
+</main>
+
+<script src="./script/NFL.js"></script>
+
+</body>
+
+</html>
