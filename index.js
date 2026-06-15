@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 
-const PORT = 2000;
+
 const app = express();
 
 app.use(express.static("public"));
