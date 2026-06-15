@@ -16,17 +16,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const db = new pg.Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 
-// ================= ROUTES =================
-
-// Public pages
 app.get("/", (req, res) => res.sendFile("login.html", { root: "loginRegister" }));
 app.get("/login", (req, res) => res.sendFile("login.html", { root: "loginRegister" }));
 app.get("/register", (req, res) => res.sendFile("register.html", { root: "loginRegister"}));
@@ -178,7 +174,9 @@ app.get("/logout",(req,res)=>{
     return res.redirect("/login");
 })
 
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on ${PORT}`);
 });
 
